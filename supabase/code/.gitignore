@@ -1,5 +1,42 @@
-volumes/db/data
-volumes/storage
+# Environment files with secrets
 .env
+.env.local
+.env.production
+.env.*.local
+
+# Database data
+volumes/db/data
+volumes/db/data/
+
+# Storage files
+volumes/storage
+volumes/storage/
+
+# Logs
+volumes/logs/
+*.log
+
+# Test files
 test.http
+
+# Docker overrides
 docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.backup
+*.bak
+
+# Database dumps
+*.sql.gz
+*.dump

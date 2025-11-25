@@ -1,0 +1,183 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEMPLATE DE VARIÁVEIS DE AMBIENTE PARA EASY PANEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INSTRUÇÕES:
+1. Execute o script: cd code && ./setup-for-easypanel.sh
+2. Copie os valores do arquivo .env gerado
+3. Cole no Easy Panel na seção "Environment Variables"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔐 SECRETS (COPIE DO SEU .env)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+POSTGRES_PASSWORD=<cole_aqui_o_valor_do_seu_.env>
+JWT_SECRET=<cole_aqui_o_valor_do_seu_.env>
+ANON_KEY=<cole_aqui_o_valor_do_seu_.env>
+SERVICE_ROLE_KEY=<cole_aqui_o_valor_do_seu_.env>
+SECRET_KEY_BASE=<cole_aqui_o_valor_do_seu_.env>
+VAULT_ENC_KEY=<cole_aqui_o_valor_do_seu_.env>
+LOGFLARE_API_KEY=<cole_aqui_o_valor_do_seu_.env>
+LOGFLARE_LOGGER_BACKEND_API_KEY=<cole_aqui_o_valor_do_seu_.env>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 CONFIGURAÇÃO DE DOMÍNIO (EDITE COM SEU DOMÍNIO REAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SITE_URL=https://seu-dominio.com
+API_EXTERNAL_URL=https://seu-dominio.com
+SUPABASE_PUBLIC_URL=https://seu-dominio.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💾 CONFIGURAÇÃO DE DATABASE (USE ESTES VALORES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+POSTGRES_HOST=db
+POSTGRES_DB=postgres
+POSTGRES_PORT=5432
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 CONFIGURAÇÃO DE AUTENTICAÇÃO (USE ESTES VALORES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JWT_EXPIRY=3600
+DISABLE_SIGNUP=false
+ENABLE_EMAIL_SIGNUP=true
+ENABLE_EMAIL_AUTOCONFIRM=false
+ENABLE_ANONYMOUS_USERS=false
+ENABLE_PHONE_SIGNUP=false
+ENABLE_PHONE_AUTOCONFIRM=false
+
+MAILER_URLPATHS_CONFIRMATION=/auth/v1/verify
+MAILER_URLPATHS_INVITE=/auth/v1/verify
+MAILER_URLPATHS_RECOVERY=/auth/v1/verify
+MAILER_URLPATHS_EMAIL_CHANGE=/auth/v1/verify
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 CONFIGURAÇÃO DE SMTP (EDITE COM SUAS CREDENCIAIS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Serviços SMTP recomendados:
+- Resend (https://resend.com) - 100 emails/dia grátis
+- SendGrid (https://sendgrid.com) - 100 emails/dia grátis
+- Amazon SES - Pago mas muito barato
+
+SMTP_ADMIN_EMAIL=noreply@seu-dominio.com
+SMTP_HOST=smtp.resend.com
+SMTP_PORT=587
+SMTP_USER=seu_usuario_smtp
+SMTP_PASS=sua_senha_smtp
+SMTP_SENDER_NAME=Supabase
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🖥️  CONFIGURAÇÃO DO DASHBOARD (EDITE COM SUAS CREDENCIAIS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DASHBOARD_USERNAME=admin
+DASHBOARD_PASSWORD=senha_muito_forte_aqui
+STUDIO_DEFAULT_ORGANIZATION=Minha Empresa
+STUDIO_DEFAULT_PROJECT=Meu Projeto
+STUDIO_PORT=3000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️  CONFIGURAÇÕES GERAIS (USE ESTES VALORES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PGRST_DB_SCHEMAS=public,storage,graphql_public
+KONG_HTTP_PORT=8000
+KONG_HTTPS_PORT=8443
+POOLER_TENANT_ID=supabase-tenant
+POOLER_DEFAULT_POOL_SIZE=20
+POOLER_MAX_CLIENT_CONN=100
+POOLER_PROXY_PORT_TRANSACTION=6543
+FUNCTIONS_VERIFY_JWT=false
+IMGPROXY_ENABLE_WEBP_DETECTION=true
+DOCKER_SOCKET_LOCATION=/var/run/docker.sock
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🤖 OPENAI (OPCIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para habilitar o SQL Editor Assistant no Studio:
+
+OPENAI_API_KEY=sk-proj-sua-chave-aqui
+
+Se não quiser usar, deixe vazio:
+
+OPENAI_API_KEY=
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☁️  GOOGLE CLOUD (OPCIONAL - APENAS SE USAR BIG QUERY)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Se não usar Big Query, deixe vazio:
+
+GOOGLE_PROJECT_ID=
+GOOGLE_PROJECT_NUMBER=
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 COMO USAR NO EASY PANEL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. No Easy Panel, vá para seu projeto
+2. Clique em "Environment Variables" ou "Variáveis de Ambiente"
+3. Modo BULK EDIT (recomendado):
+   - Clique em "Bulk Edit" ou "Edição em Massa"
+   - Cole TODAS as variáveis acima (já com valores preenchidos)
+   - Clique em "Save" ou "Salvar"
+
+4. Ou modo MANUAL:
+   - Adicione uma por uma usando o botão "Add Variable"
+   - Nome: POSTGRES_PASSWORD
+   - Valor: (cole o valor do seu .env)
+   - Repita para todas as variáveis
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANTE - CHECKLIST DE SEGURANÇA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Antes de fazer deploy, verifique:
+
+☑️  Todos os secrets foram gerados usando generate-secrets.sh
+☑️  POSTGRES_PASSWORD é único e forte
+☑️  JWT_SECRET é único e forte
+☑️  DASHBOARD_USERNAME não é "admin" (mude!)
+☑️  DASHBOARD_PASSWORD é forte (mínimo 16 caracteres)
+☑️  SITE_URL, API_EXTERNAL_URL e SUPABASE_PUBLIC_URL apontam para seu domínio real
+☑️  Configurações de SMTP estão corretas e testadas
+☑️  Não commitou o arquivo .env com secrets no Git público
+☑️  HTTPS está configurado nos domínios (Let's Encrypt no Easy Panel)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 PRÓXIMOS PASSOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Após configurar as variáveis:
+
+1. Configure o Docker Compose File: easypanel.yml
+2. Configure os domínios:
+   - API: api.seu-dominio.com → porta 8000
+   - Studio: studio.seu-dominio.com → porta 3000
+3. Clique em Deploy
+4. Aguarde todos os serviços ficarem green (Running)
+5. Acesse o dashboard: https://studio.seu-dominio.com
+6. Teste a API: https://api.seu-dominio.com/rest/v1/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICA: Salve este arquivo preenchido em um local seguro!
+Você pode precisar dele para reconfigurar ou fazer backup.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
